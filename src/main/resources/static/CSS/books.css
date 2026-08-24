@@ -1,0 +1,7 @@
+.search-bar{display:grid;grid-template-columns:2fr 1fr auto;gap:10px;margin-bottom:22px}
+.book-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.detail-card{max-width:900px;margin:auto}
+.detail-title{font-size:34px;margin:10px 0 5px}
+.detail-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:25px 0}
+.meta-item{padding:15px;border:1px solid var(--border);border-radius:12px}.meta-item small{display:block;color:var(--muted);margin-bottom:5px}
+@media(max-width:800px){.search-bar{grid-template-columns:1fr}.book-grid{grid-template-columns:1fr}.detail-meta{grid-template-columns:1fr 1fr}}

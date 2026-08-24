@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="/CSS/common.css">
+<link rel="stylesheet" href="/CSS/auth.css">
+<link rel="stylesheet" href="/CSS/register.css">
+</head>
+<body>
+
+<main class="auth-page"><section class="auth-card register-card">
+<div class="auth-brand">LibraByte</div><h1>Create Account</h1><p class="subtitle">Join your digital library.</p>
+<form id="registerForm">
+<div class="form-group"><label for="username">Username</label><input id="username" class="form-control" required autocomplete="username"></div>
+<div class="form-group"><label for="email">Email</label><input id="email" class="form-control" type="email" required autocomplete="email"></div>
+<div class="form-group"><label for="password">Password</label><div class="password-wrap"><input id="password" class="form-control" type="password" required minlength="6"><button type="button" class="password-toggle" id="togglePassword">Show</button></div></div>
+<div class="form-group"><label for="confirmPassword">Confirm Password</label><div class="password-wrap"><input id="confirmPassword" class="form-control" type="password" required minlength="6"><button type="button" class="password-toggle" id="toggleConfirm">Show</button></div></div>
+<button id="registerBtn" class="btn btn-success" style="width:100%">Create Account</button>
+</form>
+<div class="auth-links"><span></span><a href="/HTML/login.html">Back to Login</a></div>
+</section></main>
+<script src="/JavaScript/common.js"></script>
+<script src="/JavaScript/register.js"></script>
+</body>
+</html>

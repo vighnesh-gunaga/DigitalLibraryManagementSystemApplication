@@ -1,0 +1,3 @@
+.login-card{border-top:5px solid #5b4bdb}
+.password-wrap{position:relative}.password-wrap .form-control{padding-right:70px}
+.password-toggle{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:#5b4bdb;font-weight:700;cursor:pointer}

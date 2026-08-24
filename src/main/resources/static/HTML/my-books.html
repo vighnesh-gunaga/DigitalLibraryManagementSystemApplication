@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Books</title>
+<link rel="stylesheet" href="/CSS/common.css">
+</head>
+<body>
+<header class="navbar"><div class="container nav-inner">
+<a class="brand" href="/HTML/dashboard.html">LibraByte</a>
+<nav class="nav-links">
+<a href="/HTML/dashboard.html">Dashboard</a>
+<a href="/HTML/browse-books.html">Books</a>
+<a href="/HTML/my-books.html">My Books</a>
+<a href="/HTML/reservations.html">Reservations</a>
+<a href="/HTML/profile.html">Profile</a>
+<a id="adminLink" href="/HTML/admin/admin-panel.html">Admin</a>
+<button data-logout>Logout</button>
+</nav></div></header>
+<main class="page"><div class="container">
+<div class="page-header"><h1>My Books</h1></div>
+<section class="grid grid-3">
+<div class="stat"><div class="muted">Active Books</div><div id="issuedTotal" class="value">0</div></div>
+<div class="stat"><div class="muted">Overdue</div><div id="overdueTotal" class="value">0</div></div>
+<div class="stat"><div class="muted">Unpaid Fines</div><div id="fineTotal" class="value">₹0.00</div></div>
+</section>
+<h2 style="margin-top:30px">Issued Books</h2>
+<div class="table-wrap"><table><thead><tr><th>Book</th><th>Issued</th><th>Due</th><th>Status</th><th>Action</th></tr></thead><tbody id="issuedTable"></tbody></table></div>
+<h2 style="margin-top:30px">Fines</h2>
+<div class="table-wrap"><table><thead><tr><th>Book</th><th>Due Date</th><th>Overdue Days</th><th>Amount</th><th>Status</th></tr></thead><tbody id="fineTable"></tbody></table></div>
+</div></main>
+<script src="/JavaScript/common.js"></script>
+<script src="/JavaScript/my-books.js"></script>
+</body>
+</html>

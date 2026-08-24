@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="/CSS/common.css">
+</head>
+<body>
+<header class="navbar"><div class="container nav-inner">
+<a class="brand" href="/HTML/admin/admin-panel.html">LibraByte Admin</a>
+<nav class="nav-links">
+<a href="/HTML/admin/admin-panel.html">Panel</a>
+<a href="/HTML/admin/admin-books.html">Books</a>
+<a href="/HTML/admin/reservations.html">Reservations</a>
+<a href="/HTML/dashboard.html">User View</a>
+<button data-logout>Logout</button>
+</nav></div></header>
+<main class="page"><div class="container">
+<div class="hero"><h1>Administrator Panel</h1><p>Manage your library system.</p></div>
+<section class="grid grid-3">
+<a class="card quick-card" href="/HTML/admin/admin-books.html"><h2>Manage Books</h2><p class="muted">Add, edit and delete books.</p><span class="btn btn-primary">Open Books</span></a>
+<a class="card quick-card" href="/HTML/admin/reservations.html"><h2>Reservations</h2><p class="muted">Review and process pending reservations.</p><span class="btn btn-primary">Open Reservations</span></a>
+<a class="card quick-card" href="/HTML/profile.html"><h2>Profile</h2><p class="muted">View your administrator account.</p><span class="btn btn-outline">View Profile</span></a>
+</section>
+<div class="alert" style="margin-top:20px">Category and publisher management endpoints exist in the backend. This frontend keeps the admin panel focused on the working Books and Reservations modules.</div>
+</div></main>
+<script src="/JavaScript/common.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+ const main=document.querySelector("main .container");
+ if(main){
+  const section=document.createElement("section");
+  section.className="grid grid-3";
+  section.style.marginTop="20px";
+  section.innerHTML=
+   '<a class="card" href="/HTML/admin/categories.html"><h2>🏷️ Categories</h2><p class="muted">Add, edit and delete categories.</p><span class="btn btn-primary">Manage Categories</span></a>'+
+   '<a class="card" href="/HTML/admin/publishers.html"><h2>🏢 Publishers</h2><p class="muted">Add, edit and delete publishers.</p><span class="btn btn-primary">Manage Publishers</span></a>';
+  main.appendChild(section);
+ }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Books</title>
+<link rel="stylesheet" href="/CSS/common.css">
+<link rel="stylesheet" href="/CSS/admin-books.css">
+</head>
+<body>
+<header class="navbar"><div class="container nav-inner">
+<a class="brand" href="/HTML/admin/admin-panel.html">LibraByte Admin</a>
+<nav class="nav-links">
+<a href="/HTML/admin/admin-panel.html">Panel</a>
+<a href="/HTML/admin/admin-books.html">Books</a>
+<a href="/HTML/admin/reservations.html">Reservations</a>
+<a href="/HTML/dashboard.html">User View</a>
+<button data-logout>Logout</button>
+</nav></div></header>
+<main class="page"><div class="container">
+<div class="page-header"><div><h1>Manage Books</h1><p class="muted">Add, edit and delete library books.</p></div><button id="addBookBtn" class="btn btn-primary">+ Add Book</button></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Title</th><th>Author</th><th>Category</th><th>Publisher</th><th>Stock</th><th>Actions</th></tr></thead><tbody id="bookTable"></tbody></table></div>
+</div></main>
+<div id="bookModal" class="modal-backdrop">
+<div class="modal"><div class="modal-header"><h2 id="modalTitle">Add Book</h2><button id="closeModal" type="button" class="close-btn">×</button></div>
+<form id="bookForm">
+<div class="grid grid-2">
+<div class="form-group"><label>Title *</label><input id="title" class="form-control" required></div>
+<div class="form-group"><label>Author *</label><input id="author" class="form-control" required></div>
+<div class="form-group"><label>ISBN</label><input id="isbn" class="form-control"></div>
+<div class="form-group"><label>Quantity *</label><input id="quantity" class="form-control" type="number" min="1" required></div>
+<div class="form-group"><label>Category *</label><select id="categoryId" class="form-control" required></select></div>
+<div class="form-group"><label>Publisher *</label><select id="publisherId" class="form-control" required></select></div>
+</div>
+<div class="actions"><button type="submit" class="btn btn-primary">Save Book</button><button type="button" id="cancelModal" class="btn btn-outline">Cancel</button></div>
+</form></div></div>
+<script>document.getElementById("cancelModal").onclick=()=>document.getElementById("closeModal").click();</script>
+<script src="/JavaScript/common.js"></script>
+<script src="/JavaScript/admin-books.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+ const h=document.querySelector(".page-header");
+ if(h){
+  const d=document.createElement("div");
+  d.className="actions";
+  d.innerHTML='<a class="btn btn-outline" href="/HTML/admin/categories.html">+ Category</a><a class="btn btn-outline" href="/HTML/admin/publishers.html">+ Publisher</a>';
+  h.appendChild(d);
+ }
+});
+</script>
+</body>
+</html>

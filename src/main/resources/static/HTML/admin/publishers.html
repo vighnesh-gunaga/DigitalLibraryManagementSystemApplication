@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Publisher Management - LibraByte</title>
+<link rel="stylesheet" href="/CSS/common.css">
+<link rel="stylesheet" href="/CSS/admin-management.css">
+</head>
+<body>
+<header class="navbar">
+ <div class="container nav-inner">
+  <a class="brand" href="/HTML/admin/admin-panel.html">LibraByte Admin</a>
+  <nav class="nav-links">
+   <a href="/HTML/admin/admin-panel.html">Panel</a>
+   <a href="/HTML/admin/admin-books.html">Books</a>
+   <a href="/HTML/admin/categories.html">Categories</a>
+   <a href="/HTML/admin/publishers.html">Publishers</a>
+   <a href="/HTML/admin/reservations.html">Reservations</a>
+   <a href="/HTML/dashboard.html">User View</a>
+   <button data-logout>Logout</button>
+  </nav>
+ </div>
+</header>
+
+<main class="page">
+ <div class="container">
+  <div class="page-header">
+   <div>
+    <h1>Manage Publishers</h1>
+    <p class="muted">Create, edit and delete publisher records.</p>
+   </div>
+  </div>
+
+  <section class="card">
+   <div class="inline-form">
+    <input id="resourceName" class="form-control"
+           placeholder="Publisher name" maxlength="100" required>
+    <div class="actions">
+     <button id="saveResourceBtn" class="btn btn-primary">Add Publisher</button>
+     <button id="cancelEdit" class="btn btn-outline">Clear</button>
+    </div>
+   </div>
+   <div id="resourceList" class="resource-list"></div>
+  </section>
+ </div>
+</main>
+
+<script src="/JavaScript/common.js"></script>
+<script src="/JavaScript/resource-manager.js"></script>
+<script src="/JavaScript/admin-publishers.js"></script>
+</body>
+</html>

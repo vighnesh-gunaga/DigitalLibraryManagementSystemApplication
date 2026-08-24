@@ -1,0 +1,7 @@
+.admin-toolbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;place-items:center;padding:20px;z-index:200}
+.modal-backdrop.open{display:grid}
+.modal{width:min(650px,100%);background:#fff;border-radius:16px;padding:25px;max-height:90vh;overflow:auto}
+.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.modal-header h2{margin:0}
+.close-btn{border:0;background:#f3f4f6;border-radius:8px;width:36px;height:36px;cursor:pointer}

@@ -1,0 +1,6 @@
+.management-toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.inline-form{display:grid;grid-template-columns:1fr auto;gap:10px;margin-bottom:18px}
+.resource-list{display:grid;gap:10px}
+.resource-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px;border:1px solid #e5e7eb;border-radius:12px;background:#fff}
+.resource-name{font-weight:750}.small-actions{display:flex;gap:7px;flex-wrap:wrap}
+@media(max-width:650px){.inline-form{grid-template-columns:1fr}.resource-row{flex-direction:column;align-items:flex-start}}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+<link rel="stylesheet" href="/CSS/common.css">
+</head>
+<body>
+<header class="navbar"><div class="container nav-inner">
+<a class="brand" href="/HTML/dashboard.html">LibraByte</a>
+<nav class="nav-links">
+<a href="/HTML/dashboard.html">Dashboard</a>
+<a href="/HTML/browse-books.html">Books</a>
+<a href="/HTML/my-books.html">My Books</a>
+<a href="/HTML/reservations.html">Reservations</a>
+<a href="/HTML/profile.html">Profile</a>
+<a id="adminLink" href="/HTML/admin/admin-panel.html">Admin</a>
+<button data-logout>Logout</button>
+</nav></div></header>
+<main class="page"><div class="container">
+<div class="page-header"><h1>My Profile</h1></div>
+<section class="card" style="max-width:700px">
+<div class="grid grid-2">
+<div><div class="muted">User ID</div><strong id="profileId">—</strong></div>
+<div><div class="muted">Username</div><strong id="profileUsername">—</strong></div>
+<div><div class="muted">Email</div><strong id="profileEmail">—</strong></div>
+<div><div class="muted">Role</div><strong id="profileRole">—</strong></div>
+<div><div class="muted">Session</div><strong id="profileToken">—</strong></div>
+</div>
+<div style="margin-top:25px"><button class="btn btn-danger" data-logout>Logout</button></div>
+</section>
+</div></main>
+<script src="/JavaScript/common.js"></script>
+<script src="/JavaScript/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Reservations</title>
+<link rel="stylesheet" href="/CSS/common.css">
+</head>
+<body>
+<header class="navbar"><div class="container nav-inner">
+<a class="brand" href="/HTML/admin/admin-panel.html">LibraByte Admin</a>
+<nav class="nav-links">
+<a href="/HTML/admin/admin-panel.html">Panel</a>
+<a href="/HTML/admin/admin-books.html">Books</a>
+<a href="/HTML/admin/reservations.html">Reservations</a>
+<a href="/HTML/dashboard.html">User View</a>
+<button data-logout>Logout</button>
+</nav></div></header>
+<main class="page"><div class="container">
+<div class="page-header"><div><h1>Manage Reservations</h1><p class="muted">Review pending reservations and process them.</p></div><button id="refreshBtn" class="btn btn-outline">Refresh</button></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>User</th><th>Book</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead><tbody id="reservationTable"></tbody></table></div>
+</div></main>
+<script src="/JavaScript/common.js"></script>
+<script src="/JavaScript/admin-reservations.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse Books</title>
+<link rel="stylesheet" href="/CSS/common.css">
+<link rel="stylesheet" href="/CSS/books.css">
+</head>
+<body>
+<header class="navbar"><div class="container nav-inner">
+<a class="brand" href="/HTML/dashboard.html">LibraByte</a>
+<nav class="nav-links">
+<a href="/HTML/dashboard.html">Dashboard</a>
+<a href="/HTML/browse-books.html">Books</a>
+<a href="/HTML/my-books.html">My Books</a>
+<a href="/HTML/reservations.html">Reservations</a>
+<a href="/HTML/profile.html">Profile</a>
+<a id="adminLink" href="/HTML/admin/admin-panel.html">Admin</a>
+<button data-logout>Logout</button>
+</nav></div></header>
+<main class="page"><div class="container">
+<div class="page-header"><div><h1>Browse Books</h1><p class="muted">Find a book by title, author or category.</p></div></div>
+<form id="searchForm" class="search-bar">
+<input id="search" class="form-control" placeholder="Search...">
+<select id="searchMode" class="form-control"><option value="title">Title</option><option value="author">Author</option><option value="category">Category</option></select>
+<button class="btn btn-primary">Search</button>
+</form>
+<button id="clearSearch" class="btn btn-outline" style="margin-bottom:20px">Show All Books</button>
+<section id="bookGrid" class="book-grid"></section>
+</div></main>
+<script src="/JavaScript/common.js"></script>
+<script src="/JavaScript/browse-books.js"></script>
+</body>
+</html>

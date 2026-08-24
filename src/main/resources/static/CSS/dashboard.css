@@ -1,0 +1,3 @@
+.hero{background:linear-gradient(135deg,#5b4bdb,#7c6ff0);color:#fff;border-radius:20px;padding:28px;margin-bottom:22px}
+.hero h1{margin:0 0 8px;font-size:32px}.hero p{margin:0;opacity:.9}
+.quick-card{display:flex;flex-direction:column;gap:10px}

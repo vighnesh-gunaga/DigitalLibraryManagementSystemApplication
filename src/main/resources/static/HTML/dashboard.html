@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="/CSS/common.css">
+<link rel="stylesheet" href="/CSS/dashboard.css">
+</head>
+<body>
+<header class="navbar"><div class="container nav-inner">
+<a class="brand" href="/HTML/dashboard.html">LibraByte</a>
+<nav class="nav-links">
+<a href="/HTML/dashboard.html">Dashboard</a>
+<a href="/HTML/browse-books.html">Books</a>
+<a href="/HTML/my-books.html">My Books</a>
+<a href="/HTML/reservations.html">Reservations</a>
+<a href="/HTML/profile.html">Profile</a>
+<a id="adminLink" href="/HTML/admin/admin-panel.html">Admin</a>
+<button data-logout>Logout</button>
+</nav></div></header>
+<main class="page"><div class="container">
+<section class="hero"><h1>Welcome, <span id="welcomeName">Reader</span>!</h1><p>Manage your books, reservations and library activity from one place.</p></section>
+<section class="grid grid-3">
+<div class="stat"><div class="muted">Total Books</div><div id="bookCount" class="value">0</div></div>
+<div class="stat"><div class="muted">My Active Books</div><div id="issuedCount" class="value">0</div></div>
+<div class="stat"><div class="muted">Pending Reservations</div><div id="reservationCount" class="value">0</div></div>
+</section>
+<div class="page-header" style="margin-top:30px"><h2>Recently Added Books</h2><a class="btn btn-outline" href="/HTML/browse-books.html">Browse All</a></div>
+<section id="recentBooks" class="grid grid-3"></section>
+</div></main>
+<script src="/JavaScript/common.js"></script>
+<script src="/JavaScript/dashboard.js"></script>
+</body>
+</html>
