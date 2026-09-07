@@ -6,6 +6,7 @@ import com.example.DigitalLibraryManagementSystem.dto.RegisterRequest;
 import com.example.DigitalLibraryManagementSystem.entity.Role;
 import com.example.DigitalLibraryManagementSystem.entity.User;
 import com.example.DigitalLibraryManagementSystem.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -24,6 +25,8 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
 
+    @Value("${app.base-url}")
+    private String baseUrl;
 
     public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager, JwtService jwtService) {
         this.userRepository = userRepository;
@@ -101,8 +104,7 @@ public class AuthService {
         userRepository.save(user);
 
         String resetLink =
-                "http://localhost:8081/HTML/reset-password.html?token="
-                        + token;
+                baseUrl + "/HTML/reset-password.html?token=" + token;
 
         System.out.println("RESET LINK = " + resetLink);
 
